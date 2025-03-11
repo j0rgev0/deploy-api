@@ -1,0 +1,40 @@
+### Recuperar todos los pisos
+GET http://localhost:3000/apartments
+
+
+### Recuperar un piso por id
+GET http://localhost:3000/apartments/d290f1ee-6c54-4b01-90e6-d701748f0851
+
+### Recuperar todos los pisos segun sus caractristicas
+GET http://localhost:3000/apartments?features=pool
+
+
+
+### Crear un piso con POST
+POST http://localhost:3000/apartments
+Content-Type: application/json
+
+{
+
+  "address": "Calle del Marqués de Cubas, 7",
+  "neighborhood": "Centro",
+  "price": 2000,
+  "bedrooms": 2,
+  "bathrooms": 2,
+  "area": 90,
+  "description": "Piso recién renovado con vistas al Palacio Real.",
+  "features": ["elevator", "balcony", "furnished"],
+  "images": [
+    "https://www.idealista.com/pictures/1",
+    "https://www.idealista.com/pictures/2"
+  ]
+}
+
+### Actializar un piso
+PATCH http://localhost:3000/apartments/12908eea-1e4e-4600-bbb2-81e8feb2b6d1
+Content-Type: application/json
+
+{
+  "address": "Calle de la Princesa, 3",
+  "bedrooms": 3
+}

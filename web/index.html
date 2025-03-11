@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probar API Rest</title>
+    <style>
+        article {
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+    </style>
+    <script type="module">
+        fetch('http://localhost:3000/apartments')
+            .then(res => res.json())
+            .then(apartments => {
+                const html = apartments.map(apartment => {
+                    return `
+                        <article data-id="${apartment.id}">
+                            <h2>${apartment.address}</h2>
+                            <p>${apartment.description}</p>
+                            <p>${apartment.price}</p>
+
+                            <button>Eliminar</button>
+                        </article>
+                    `
+                }).join('')
+
+                document.querySelector('main').innerHTML = html
+                document.addEventListener('click', e => {
+                    if (e.target.matches('button')) {
+                        const article = e.target.closest('article')
+                        const id = article.dataset.id
+
+                        fetch(`http://localhost:3000/apartments/${id}`, {
+                            method: 'DELETE'
+                        })
+                        .then(res => {
+                            if (res.ok) {
+                                article.remove()
+                            }
+                        })
+                    }
+                })
+            })
+    </script>
+</head>
+<body>
+    <main></main>
+</body>
+</html>

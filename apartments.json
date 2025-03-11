@@ -1,0 +1,122 @@
+[
+  {
+    "id": "d290f1ee-6c54-4b01-90e6-d701748f0851",
+    "address": "Calle Gran Vía, 10",
+    "neighborhood": "Centro",
+    "price": 1500,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "area": 80,
+    "description": "Piso luminoso en el corazón de Madrid, cerca de todos los servicios.",
+    "features": ["elevator", "air conditioning", "furnished"],
+    "images": ["https://example.com/imagen1.jpg", "https://example.com/imagen2.jpg"]
+  },
+  {
+    "id": "5b8a404e-3d14-4a7e-ae9b-3c9e5ecfbb0b",
+    "address": "Calle Serrano, 45",
+    "neighborhood": "Salamanca",
+    "price": 2500,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "area": 120,
+    "description": "Piso de lujo en el exclusivo barrio de Salamanca.",
+    "features": ["garage", "terrace", "community pool"],
+    "images": ["https://example.com/imagen3.jpg", "https://example.com/imagen4.jpg"]
+  },
+  {
+    "id": "9f3a79e1-2f0c-4f4e-92b5-6b9c74b476a8",
+    "address": "Calle Atocha, 100",
+    "neighborhood": "Atocha",
+    "price": 1000,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "area": 60,
+    "description": "Apartamento acogedor cerca de la estación de Atocha.",
+    "features": ["low consumption", "central heating"],
+    "images": ["https://example.com/imagen5.jpg"]
+  },
+  {
+    "id": "2f085e4b-732c-4872-8507-0bdf9eb8cbd2",
+    "address": "Calle Fuencarral, 78",
+    "neighborhood": "Chamberí",
+    "price": 1800,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "area": 85,
+    "description": "Moderno y reformado, ideal para parejas.",
+    "features": ["storage room", "garage"],
+    "images": ["https://example.com/imagen6.jpg"]
+  },
+  {
+    "id": "a8ec7f55-7c90-46b1-8283-5b76e9f7a6f2",
+    "address": "Paseo de la Castellana, 200",
+    "neighborhood": "Chamartín",
+    "price": 3200,
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "area": 150,
+    "description": "Amplio piso familiar en zona empresarial.",
+    "features": ["pool", "garden", "concierge"],
+    "images": ["https://example.com/imagen7.jpg"]
+  },
+  {
+    "id": "f5c5e02b-d09e-4c2c-bb6f-2f4f8a9b495c",
+    "address": "Calle Alcalá, 500",
+    "neighborhood": "Ciudad Lineal",
+    "price": 900,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "area": 50,
+    "description": "Económico y bien comunicado, ideal para estudiantes.",
+    "features": ["elevator", "heating"],
+    "images": ["https://example.com/imagen8.jpg"]
+  },
+  {
+    "id": "bd86f6e3-66b7-49c6-bd4d-2a8a85b9e4b3",
+    "address": "Avenida de América, 30",
+    "neighborhood": "Prosperidad",
+    "price": 1200,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "area": 70,
+    "description": "Piso bien ubicado, cercano al metro y servicios.",
+    "features": ["terrace", "bright"],
+    "images": ["https://example.com/imagen9.jpg"]
+  },
+  {
+    "id": "73e30f28-0283-41e2-a786-1f5fef2c3997",
+    "address": "Calle Bravo Murillo, 150",
+    "neighborhood": "Tetuán",
+    "price": 1100,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "area": 65,
+    "description": "Buena oportunidad, piso reformado y accesible.",
+    "features": ["low consumption", "double-glazed windows"],
+    "images": ["https://example.com/imagen10.jpg"]
+  },
+  {
+    "id": "c3f30d5b-dc2c-4c8e-98e7-1a5a8916e4e1",
+    "address": "Calle Goya, 20",
+    "neighborhood": "Retiro",
+    "price": 2700,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "area": 130,
+    "description": "Piso de alta gama con vistas al parque del Retiro.",
+    "features": ["pool", "gym", "sauna"],
+    "images": ["https://example.com/imagen11.jpg"]
+  },
+  {
+    "id": "d5e6a837-365e-4d6f-a0b7-981a7e7f3f5c",
+    "address": "Calle Princesa, 55",
+    "neighborhood": "Moncloa",
+    "price": 1400,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "area": 75,
+    "description": "Piso con excelente conexión a transporte público.",
+    "features": ["balcony", "air conditioning"],
+    "images": ["https://example.com/imagen12.jpg"]
+  }
+]

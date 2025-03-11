@@ -1,6 +1,7 @@
 const express = require('express')
 const crypto = require('node:crypto')
 const cors = require('cors')
+
 const apartmentsJSON = require('./apartments.json')
 const { validateApartment, validatePartialApartment } = require('./apartments')
 
@@ -14,7 +15,11 @@ app.use(cors({
       'http://apartments.com'
     ]
 
-    if (ACCEPTED_ORIGINS.includes(origin) || !origin) {
+    if (ACCEPTED_ORIGINS.includes(origin)) {
+      return callback(null, true)
+    }
+
+    if (!origin) {
       return callback(null, true)
     }
 
@@ -23,23 +28,12 @@ app.use(cors({
 })) // SOLUCION CORS
 app.disable('x-powered-by')
 
-const ACCEPTED_ORIGINS = [
-  'http://localhost:8080',
-  'http://localhost:3000',
-  'http://apartments.com'
-]
-
 app.get('/', (req, res) => {
   res.json({ message: 'HELLO WORLD' })
 })
 
 // Todos los recursos que sean APARTMENTS se identifican con /movies
 app.get('/apartments', (req, res) => {
-  const origin = req.header('origin')
-  if (ACCEPTED_ORIGINS.includes(origin) || !origin) {
-    res.header('Access-Control-Allow-Origin', origin)
-  }
-
   const { features } = req.query
   if (features) {
     const filteredMovies = apartmentsJSON.filter((apartment) =>
@@ -77,11 +71,6 @@ app.post('/apartments', (req, res) => {
 })
 
 app.delete('/apartments/:id', (req, res) => {
-  const origin = req.header('origin')
-  if (ACCEPTED_ORIGINS.includes(origin) || !origin) {
-    res.header('Access-Control-Allow-Origin', origin)
-  }
-
   const { id } = req.params
   const apartmentIndex = apartmentsJSON.findIndex(
     (apartment) => apartment.id === id
@@ -120,16 +109,6 @@ app.patch('/apartments/:id', (req, res) => {
   apartmentsJSON[apartmentIndex] = updatedApartment
 
   return res.json(updatedApartment)
-})
-
-app.options('/apartments/:id', (req, res) => {
-  const origin = req.header('origin')
-
-  if (ACCEPTED_ORIGINS.includes(origin) || !origin) {
-    res.header('Access-Control-Allow-Origin', origin)
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE')
-  }
-  res.send(200)
 })
 
 const PORT = process.env.PORT ?? 3000
